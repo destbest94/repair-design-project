@@ -3,8 +3,17 @@
 $bg-1: #131313;
 $bg-2: #fff;
 
-$m-size: 1100px;
-$s-size: 560px;
+$m-size: 1024px;
+$s-size: 768px;
+
+$sm-size: 576px;
+$md-size: 768px;
+$lg-size: 992px;
+$xl-size: 1200px;
+
+$sm-max-size: 767px;
+$md-max-size: 991px;
+$lg-max-size: 1199px;
 
 $text-color-special: #e3b873;
 
@@ -49,14 +58,13 @@ body {
 
   &:hover {
     box-shadow: 0px 5px 25px rgba(227, 184, 115, 0.3);
+    background: rgb(238, 203, 148);
     cursor: pointer;
   }
 
 }
 
 //mixin
-
-
 
 .main {
   height: 100vh;
@@ -69,9 +77,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 83px;
-    padding-right: 100px;
-    height: 83px;
+    
+    font-family: "FuturaBookC";
+    text-transform: uppercase;
     color: #fff;
 
     &__logo {
@@ -100,8 +108,8 @@ body {
       }
     }
 
-    &__number {
-      width: 227px;
+    &__phone {
+      width: 230px;
       min-width: 127px;
       text-align: center;
     }
@@ -112,13 +120,24 @@ body {
       height: 31px;
     }
 
-    @media (max-width: $m-size) {
-      font-family: "FuturaDemiC";
+    @media (max-width: $sm-size) {
+      height: 55px;
       font-size: 12px;
       line-height: 14px;
-      text-transform: uppercase;
-      height: 57px;
+    }
 
+    @media (min-width: $sm-size) {
+      height: 85px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (max-width: $sm-max-size) {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    @media (max-width: $md-max-size) {
       &__nav {
         display: none;
       }
@@ -127,16 +146,17 @@ body {
         display: none;
       }
 
-      &__number {
-        width: 127px;
+      &__phone {
+        width: 135px;
         text-align: right;
       }
     }
 
-    @media (max-width: $s-size) {
-      padding-left: 18px;
-      padding-right: 18px;
+    @media (min-width: $md-size) {
+      padding-left: 83px;
+      padding-right: 100px;
     }
+
   }
 
   &--content-wrapper {
@@ -179,7 +199,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    position: relative;
     padding: 0 18px;
 
     &::before {
@@ -194,8 +213,6 @@ body {
     }
 
     &--content-wrapper {
-      max-width: 550px;
-      margin-left: 15px;
       z-index: 2;
     }
 
@@ -203,8 +220,6 @@ body {
       font-family: "YesevaOne";
       font-style: normal;
       font-weight: normal;
-      font-size: 40px;
-      line-height: 53px;
       text-transform: uppercase;
       color: #FFFFFF;
       margin-bottom: 20px;
@@ -212,8 +227,6 @@ body {
 
     &__text {
       font-family: "FuturaBookC";
-      font-size: 22px;
-      line-height: 30px;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       margin-bottom: 40px;
@@ -221,7 +234,6 @@ body {
 
     &--buttons {
       font-family: "FuturaBookC";
-      max-width: 434px;
       display: flex;
       justify-content: space-between;
       color: #fff;
@@ -229,17 +241,14 @@ body {
 
     &__calculate-btn {
       @include button;
-      width: 207px;
       height: 51px;
     }
 
     &__submit-app-btn_clear {
       @include button;
-      width: 207px;
       height: 51px;
       outline: 2px solid #fff;
       background: none;
-      box-shadow: none;
     }
   }
 
@@ -269,22 +278,51 @@ body {
   }
 
 
-  @media (max-width: $m-size) {
+  @media (max-width: $sm-max-size) {
     &--scroll-down {
+      display: none;
+    }
+
+    &--instagram {
       display: none;
     }
   }
 
-  @media (max-width: $s-size) {
-    &--instagram {
-      display: none;
-    }
-
+  @media (min-width: $sm-size) {
+    
     &--content {
       &--content-wrapper {
-        margin-left: 0;
+        max-width: 550px;
+        margin-left: 15px;
       }
 
+      &__title {
+        font-size: 40px;
+        line-height: 53px;
+      }
+
+      &__text {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      &--buttons {
+        max-width: 434px;
+      }
+
+      &__calculate-btn {
+        width: 207px;
+        margin-bottom: 26px;
+      }
+  
+      &__submit-app-btn_clear {
+        width: 207px;      
+      }
+    }
+  }
+
+  @media (max-width: $sm-size) {
+    &--content {
       &__title {
         font-size: 25px;
         line-height: 133%;
@@ -301,13 +339,11 @@ body {
       }
 
       &__calculate-btn {
-        flex-basis: 1;
         width: 100%;
         margin-bottom: 26px;
       }
   
       &__submit-app-btn_clear {
-        flex-basis: 1;
         width: 100%;
       }
     }
@@ -516,7 +552,7 @@ body {
     }
   }
 
-  @media (max-width: $s-size) {
+  @media (max-width: $xl-size) {
     .inner {
       padding-top: 30px;
       padding-left: 18px;
@@ -530,11 +566,12 @@ body {
       flex-direction: column;
       align-items: center;
       order: 1;
-      margin-top: 0;
+      margin: 0 auto;
+      padding: 0;
 
       &__title {
         margin: 0;
-        font-size: 22px;
+        font-size: 24px;
         line-height: 138.6%;
         width: 250px;
 
@@ -548,7 +585,7 @@ body {
       }
 
       &__text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 158.48%;
         margin-top: 22px;
       }
@@ -628,105 +665,4 @@ body {
       }
     }
   }
-}
-
-.online-control {
-  height: 1080px;
-  border: 1px solid #fff;
-  
-  &--part-1 {
-    height: 200px;
-    background-color: $bg-1;;
-  }
-
-  &--part-2 {
-    height: 100%;
-    background-color: $bg-2;
-  }
-}
-
-.types {
-  height: 804px;
-  background-color: $bg-2;
-}
-
-.realize {
-  height: 1018px;
-  background-color: $bg-2;
-}
-
-.design {
-  height: 1790px;
-
-  &--part-1 {
-    height: 580px;
-    background-color: $bg-2;
-  }
-  
-  &--part-2 {
-    height: 1210px;
-    background-color: $bg-1;
-  }
-}
-
-.team {
-  height: 907px;
-  
-  &--part-1 {
-    height: 380px;
-    background-color: $bg-1;
-  }
-  
-  &--part-2 {
-    height: 526px;
-    background-color: $bg-2;
-  }
-}
-
-.clients {
-  height: 747px;
-  background-color: $bg-2;
-}
-
-.questions {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height: 1173px;
-
-
-  &--part-1 {
-    height: 220px;
-    background-color: $bg-2;
-  }
-  
-  &--part-2 {
-    flex: 1;
-    background-image: url('./assets/img/question-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.9);
-    }
-
-    @media (max-width: $s-size) {
-      background: none;
-    }
-
-  }
-}
-
-.footer {
-  height: 133px;
-  background-color: $bg-1;
 }
