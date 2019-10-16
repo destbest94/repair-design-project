@@ -2241,3 +2241,11 @@ body {
     }
   }
 }
+
+.footer {
+  background-color: $bg-1;
+
+  @media (max-width: $sm-size) {
+    display: none;
+  }
+}
