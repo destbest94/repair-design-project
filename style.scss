@@ -1571,3 +1571,205 @@ body {
     }
   }
 }
+
+
+.design {
+  background-color: $bg-2;
+  height: 100%;
+
+  .inner {
+    padding-top: 110px;
+
+    height: 100%;
+    position: relative;
+  }
+
+  .section-head {
+    &__title {
+      color: #181818;
+    }
+
+    &__text {
+      max-width: 750px;
+    }
+  }
+
+  &--content {
+    padding-top: 40px;
+    position: relative;
+
+    .list-of-jobs {
+      position: relative;
+      z-index: 2;
+
+      &--item {
+        &__button {
+          margin-left: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &--part-2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-color: $bg-1;    
+      z-index: 0;
+    }
+  }
+
+  &--part-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5%;
+    background-color: $bg-1;
+
+    &__description {
+      margin-bottom: 20px;
+      font-family: "FuturaDemiC";
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+
+      color: #fff;
+    }
+
+    &__title {
+      display: flex;
+      margin-bottom: 90px;
+
+      .title {
+        width: 180px;
+        font-family: "YesevaOne";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+      }
+
+      img {
+        padding-top: 35px;
+      }
+    }
+
+    &__subtitle {
+      width: 250px;
+      margin-bottom: 15px;
+      font-family: "YesevaOne";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 23px;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      width: 350px;
+      margin-bottom: 60px;
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 25px;
+      color: #fff;
+    }
+    
+    &__slider-controller {
+      margin-top: 10px;
+      min-width: 206px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    &__right-btn,
+    &__left-btn:hover {
+      cursor: pointer;
+    }
+
+
+    &__list-wrapper {
+      flex: 1;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      .item {
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .active {
+        background-color: #fff;
+      }
+    }
+
+    &--slider-wrapper {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+
+      &__names-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .name {
+          margin-bottom: 35px;
+          font-family: "FuturaBookC";
+          font-size: 15px;
+          line-height: 18px;
+          color: #8b8b8b;
+          
+          &__title {
+            width: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e3b873;
+            padding-bottom: 2px;
+          }
+          
+          &__text {
+            width: 130px;
+          }
+        }
+
+        .active {
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $xl-size) {
+    background-color: $bg-1;
+    padding-bottom: 0;
+
+    .inner {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .section-head {
+      &__title {
+        color: #fff;
+      }
+  
+      &__text {
+        color: #fff;
+      }
+    }
+    
+    &--part-2 {
+      display: none;
+    }
+  }
+}

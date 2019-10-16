@@ -2125,4 +2125,221 @@ body {
             transform: rotate(180deg);
   }
 }
+
+.design {
+  background-color: #fff;
+  height: 100%;
+}
+
+.design .inner {
+  padding-top: 110px;
+  height: 100%;
+  position: relative;
+}
+
+.design .section-head__title {
+  color: #181818;
+}
+
+.design .section-head__text {
+  max-width: 750px;
+}
+
+.design--content {
+  padding-top: 40px;
+  position: relative;
+}
+
+.design--content .list-of-jobs {
+  position: relative;
+  z-index: 2;
+}
+
+.design--content .list-of-jobs--item__button {
+  margin-left: 0;
+  left: 0;
+}
+
+.design--content--part-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #131313;
+  z-index: 0;
+}
+
+.design--part-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 5%;
+  background-color: #131313;
+}
+
+.design--part-2__description {
+  margin-bottom: 20px;
+  font-family: "FuturaDemiC";
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.design--part-2__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.design--part-2__title .title {
+  width: 180px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.design--part-2__title img {
+  padding-top: 35px;
+}
+
+.design--part-2__subtitle {
+  width: 250px;
+  margin-bottom: 15px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.design--part-2__text {
+  width: 350px;
+  margin-bottom: 60px;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.design--part-2__slider-controller {
+  margin-top: 10px;
+  min-width: 206px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.design--part-2__right-btn, .design--part-2__left-btn:hover {
+  cursor: pointer;
+}
+
+.design--part-2__list-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.design--part-2__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.design--part-2__list .item {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.design--part-2__list .active {
+  background-color: #fff;
+}
+
+.design--part-2--slider-wrapper {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.design--part-2--slider-wrapper__names-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.design--part-2--slider-wrapper__names-list .name {
+  margin-bottom: 35px;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 18px;
+  color: #8b8b8b;
+}
+
+.design--part-2--slider-wrapper__names-list .name__title {
+  width: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e3b873;
+  padding-bottom: 2px;
+}
+
+.design--part-2--slider-wrapper__names-list .name__text {
+  width: 130px;
+}
+
+.design--part-2--slider-wrapper__names-list .active {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .design {
+    background-color: #131313;
+    padding-bottom: 0;
+  }
+  .design .inner {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .design .section-head__title {
+    color: #fff;
+  }
+  .design .section-head__text {
+    color: #fff;
+  }
+  .design--part-2 {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
