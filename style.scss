@@ -108,6 +108,106 @@ body {
   }
 }
 
+.list-of-jobs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &--item + li {
+    margin-left: 30px;
+  }
+
+  &--item {
+    position: relative;
+    width: 392px;
+    height: 580px;
+    margin-bottom: 90px;
+
+    &__img {
+      position: absolute;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      box-sizing: border-box;
+      width: 330px;
+      top: 50%;
+      left: 30px;
+      padding-top: 25px;
+      padding-left: 35px;
+      padding-bottom: 35px;
+      background-color: $bg-2;
+      position: absolute;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    &__title {
+      font-family: "YesevaOne";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      color: #363636;
+    }
+
+    &__list {
+      padding-top: 15px;
+      padding-left: 20px;
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 25px;
+
+      color: #959595;
+    }
+
+    &__button {
+      @include button;
+
+      margin-left: 20px;
+      width: 230px;
+      height: 55px;
+      color: #fff;
+      position: absolute;
+      bottom: -27px;
+
+    }
+  }
+
+  @media (max-width: $md-size) {
+    &--item + li {
+      margin-left: 0;
+    }
+  
+    &--item {
+      &__info {
+        left: 0;
+      }
+  
+      &__title {
+        font-size: 15px;
+        line-height: 138.6%;
+      }
+  
+      &__list {
+        font-size: 13px;
+        line-height: 169.8%;
+      }
+  
+      &__button {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 //public blocks
 
 
@@ -974,5 +1074,32 @@ body {
   &--part-2 {
     height: 800px;
     background-color: $bg-2;
+  }
+}
+
+
+.types {
+  padding-top: 145px;
+  padding-bottom: 180px;
+  background-color: $bg-2;
+
+  .section-head__title {
+    color: #181818;
+  }
+
+  .inner {
+    padding: 0 15px;
+  }
+
+  .list-of-jobs {
+    padding-top: 30px;
+  }
+
+  @media (max-width: $sm-size) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: $xl-size) {
+    padding-bottom: 55px;
   }
 }
