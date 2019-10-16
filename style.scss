@@ -2003,3 +2003,241 @@ body {
     display: none;
   }
 }
+
+.questions {
+
+  &--part-1 {
+    background-color: $bg-2;
+    height: 300px;
+    position: relative;
+    z-index: 5;
+    padding: 0 10px;
+
+    .background-img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      opacity: 0.05;
+
+      .img {
+        height: 100%;
+      }
+    }
+  }
+  
+  &--form-wrapper {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 60%;
+    padding: 35px 0;
+    background-color: $bg-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+      width: 80%;
+      justify-content: space-between;
+      &__title {
+        min-width: 100%;
+        margin-bottom: 45px;
+        font-family: "YesevaOne";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      &__input {
+        width: 100%;
+      }
+
+      &--name {
+        min-width: 45%;
+
+      }
+
+      &--phone {
+        min-width: 45%;
+      }
+
+      &--question {
+        margin-top: 45px;
+        min-width: 100%;
+      }
+
+      &--center {
+        margin-top: 45px;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__submit {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  &--part-2 {
+    background-image: url('./assets/img/question-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    &--content {
+      position: relative;
+      padding-top: 300px;
+      z-index: 3;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--title-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .title {
+        max-width: 550px;
+        font-family: "YesevaOne";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: space-between;
+        width: 70px;
+        margin-top: 25px;
+
+        div {
+          width: 28px;
+          height: 28px;
+          box-sizing: border-box;
+          padding-top: 6px;
+          padding-left: 6px;
+          border-radius: 50%;
+          background-color: #E3B873;
+        }
+      }
+    }
+
+    &--map {
+      margin-top: 45px;
+      margin-bottom: 65px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+  }
+
+  @media (max-width: $md-size) {
+    &--form-wrapper {
+      width: 90%;
+      left: 5%;
+
+      .form {
+        &--name {
+          min-width: 100%;
+          margin-bottom: 45px;
+        }
+
+        &--phone {
+          min-width: 100%;
+        }
+      }
+    }
+
+    &--part-2 {
+      
+      &--content {
+        padding-top: 380px;
+      }
+
+    }
+  }
+
+  @media (max-width: $lg-size) {
+    &--form-wrapper {
+      width: 90%;
+      left: 5%;
+    }
+  }
+
+  @media (max-width: $xl-size) {
+    .background-img {
+      display: none;
+    }
+  }
+
+  @media (max-width: $sm-size) {
+    &--part-1 {
+      background-color: $bg-1;
+    }
+
+    &--form-wrapper {
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      .form {
+        width: 100%;
+
+        &--checkbox-container {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        &__submit {
+          width: 100%;
+        }
+      }
+    }
+
+    &--part-2 {
+      background: none;
+      background-color: $bg-1;
+      
+      &--content {
+        padding-top: 220px;
+      }
+
+      &::before {
+        content: none;
+      }
+
+      &--title-wrapper {
+        order: 2;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
