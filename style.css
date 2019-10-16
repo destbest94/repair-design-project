@@ -2470,4 +2470,168 @@ body {
     display: none;
   }
 }
+
+.clients {
+  background-color: #fff;
+}
+
+.clients .inner {
+  padding: 90px 70px 0;
+}
+
+.clients .section-head__title {
+  color: #181818;
+}
+
+.clients .section-head__text {
+  width: 400px;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+}
+
+.clients__list .item {
+  min-width: 300px;
+  max-width: 25%;
+  padding-bottom: 20px;
+}
+
+.clients__list .item--head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients__list .item--head__img {
+  margin-right: 20px;
+}
+
+.clients__list .item--head__img img {
+  border-radius: 50%;
+}
+
+.clients__list .item--head__name {
+  width: 180px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.clients__list .item__text {
+  padding-top: 10px;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 180%;
+  color: #959595;
+}
+
+.clients__list .item--buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.clients__list .item--buttons__volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #E3B873;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  border-radius: 2px;
+  font-family: "FuturaBookC";
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 120px;
+  height: 55px;
+  margin-right: 1px;
+}
+
+.clients__list .item--buttons__volume:hover {
+  -webkit-box-shadow: 0px 5px 25px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 25px rgba(227, 184, 115, 0.3);
+  background: #eecb94;
+  cursor: pointer;
+}
+
+.clients__list .item--buttons__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #E3B873;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  border-radius: 2px;
+  font-family: "FuturaBookC";
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 150px;
+  height: 55px;
+}
+
+.clients__list .item--buttons__time:hover {
+  -webkit-box-shadow: 0px 5px 25px rgba(227, 184, 115, 0.3);
+          box-shadow: 0px 5px 25px rgba(227, 184, 115, 0.3);
+  background: #eecb94;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .clients {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
